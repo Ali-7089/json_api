@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngFor="let post of posts" (onDeleteTask)="onDelete(post)" class="container mt-2 p-2  d-flex flex-wrap ">
+        <div class="card-body">
+          <h5 class="card-title"><span>{{post.id}}</span> |  {{post.title}}</h5>
+          <p class="card-text" style="display: none;">{{post.body}}</p>
+          <app-button  (click) = "getDataFromApi(post)"></app-button> 
+        </div>
+      </div>
+      <div>
+      </div>
+
+      <div class="class">
+          <h5>{{data}}</h5>
+      </div>
+
+      <script>
+
+      </script>
+</body>
+</html>
